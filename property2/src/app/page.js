@@ -457,8 +457,8 @@ export default function Home() {
                 key={plan}
                 onClick={() => setActivePlan(plan)}
                 className={`w-[140px] sm:w-[160px] px-6 py-3 text-sm font-semibold rounded-md transition-all duration-300 ${activePlan === plan
-                    ? "bg-[#CD8C66] text-white"
-                    : "bg-gray-300 text-black hover:bg-gray-400"
+                  ? "bg-[#CD8C66] text-white"
+                  : "bg-gray-300 text-black hover:bg-gray-400"
                   }`}
               >
                 {plan}
@@ -528,7 +528,7 @@ export default function Home() {
         <Carousel className="w-full flex justify-center mt-12 sm:mt-0">
           <CarouselContent
             className="transition-transform duration-700 ease-in-out"
-            style={{ transform: translateX(`-${current * 100}%`) }}
+            style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="flex justify-center">
