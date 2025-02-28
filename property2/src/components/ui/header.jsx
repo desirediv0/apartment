@@ -47,7 +47,7 @@ function Header1() {
     }, []);
 
     return (
-        <header className="w-full z-40 fixed top-0 left-0 bg-background">
+        <header className="w-full z-40 sticky top-0 left-0 bg-background">
             <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
                 <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
                     <NavigationMenu className="flex justify-start items-start">
@@ -55,9 +55,9 @@ function Header1() {
                             {navigationItems.map((item) => (
                                 <NavigationMenuItem key={item.title}>
                                     {item.href ? (
-                                            <NavigationMenuLink href={item.href} passHref>
-                                                <Button variant="ghost">{item.title}</Button>
-                                            </NavigationMenuLink>
+                                        <NavigationMenuLink href={item.href} passHref>
+                                            <Button variant="ghost">{item.title}</Button>
+                                        </NavigationMenuLink>
                                     ) : (
                                         <>
                                             <NavigationMenuTrigger className="font-medium text-sm">
@@ -94,20 +94,20 @@ function Header1() {
                 </div>
                 <div className="flex lg:justify-center">
                     <Image
-                                            src={"/loader.png"}
-                                            alt={"property"}
-                                            width={100}
-                                            height={500}
-                                            className="w-[50px] h-[50px] object-cover"
-                                        />
+                        src={"/loader.png"}
+                        alt={"property"}
+                        width={100}
+                        height={500}
+                        className="w-[50px] h-[50px] object-cover"
+                    />
                 </div>
-                <div className="flex justify-end w-full gap-4">
+                <div className="flex justify-end w-full">
                     <Button variant="ghost" className="hidden md:inline">
-                    <FaSearch />
+                        <FaSearch />
                     </Button>
                     <div className="border-r hidden md:inline"></div>
-                    <Button variant="outline"><FaShoppingCart /></Button>
-                    <Button>Get started</Button>
+                    <Button variant="outline" className="hidden md:inline"><FaShoppingCart /></Button>
+                    <Button className="hidden md:inline">Get started</Button>
                 </div>
                 <div className="flex w-12 shrink lg:hidden items-end justify-end">
                     <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
