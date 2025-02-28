@@ -281,9 +281,9 @@ export default function Home() {
           <div className="flex items-center gap-4">
             {/* Button */}
             <Link href={"/"}>
-            <button className="w-40 h-12 bg-amber-800 hover:bg-amber-700 transition text-white text-xs font-semibold uppercase tracking-wide mt-6 rounded-lg">
-              More Details
-            </button>
+              <button className="w-40 h-12 bg-amber-800 hover:bg-amber-700 transition text-white text-xs font-semibold uppercase tracking-wide mt-6 rounded-lg">
+                More Details
+              </button>
             </Link>
 
             {/* Moving Image (Right to Left) */}
@@ -344,9 +344,9 @@ export default function Home() {
         {/* Left Side */}
         <div className="bg-no-repeat flex flex-col justify-center items-center pr-4 sm:pr-10 md:pr-24 lg:pr-64">
           <div className="bg-black h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 flex items-center justify-center border-2">
-          <Link href={"/"}>
-            <Play color="white" />
-          </Link>
+            <Link href={"/"}>
+              <Play color="white" />
+            </Link>
           </div>
           <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white w-[90%] sm:w-[85%] md:w-[700px] pt-6 sm:pt-8 lg:ml-[500px] md:pt-14 text-center md:text-left">
             WHY YOU SHOULD CHOOSE OUR BUILDING & APPARTMENTS
@@ -456,11 +456,10 @@ export default function Home() {
               <button
                 key={plan}
                 onClick={() => setActivePlan(plan)}
-                className={`w-[140px] sm:w-[160px] px-6 py-3 text-sm font-semibold rounded-md transition-all duration-300 ${
-                  activePlan === plan
+                className={`w-[140px] sm:w-[160px] px-6 py-3 text-sm font-semibold rounded-md transition-all duration-300 ${activePlan === plan
                     ? "bg-[#CD8C66] text-white"
                     : "bg-gray-300 text-black hover:bg-gray-400"
-                }`}
+                  }`}
               >
                 {plan}
               </button>
@@ -473,9 +472,8 @@ export default function Home() {
               {newdata.map((data, idx) => (
                 <div
                   key={idx}
-                  className={`flex items-center justify-between p-4 px-6 rounded-md ${
-                    idx % 2 === 0 ? "bg-[#F6F4F1]" : "bg-white"
-                  } border border-gray-300`}
+                  className={`flex items-center justify-between p-4 px-6 rounded-md ${idx % 2 === 0 ? "bg-[#F6F4F1]" : "bg-white"
+                    } border border-gray-300`}
                 >
                   <span>{data.newtitle}</span>
                   <span>{data.area}</span>
@@ -504,11 +502,11 @@ export default function Home() {
 
       {/* section-8 */}
 
-      <Case/>
+      <Case />
 
-       {/* section-9 */}
+      {/* section-9 */}
 
-    <div className="w-full min-h-[70vh] bg-orange-700/60 grid grid-cols-1 md:grid-cols-2 bg-[url(/testimonial-one-bg-img-1.png)] bg-no-repeat bg-cover px-4  sm:px-10 lg:px-20 py-10">
+      <div className="w-full min-h-[70vh] bg-orange-700/60 grid grid-cols-1 md:grid-cols-2 bg-[url(/testimonial-one-bg-img-1.png)] bg-no-repeat bg-cover px-4  sm:px-10 lg:px-20 py-10">
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left max-w-7xl mx-auto">
           <p className="text-white font-semibold text-md">WHAT IS HAPPENING</p>
@@ -530,7 +528,7 @@ export default function Home() {
         <Carousel className="w-full flex justify-center mt-12 sm:mt-0">
           <CarouselContent
             className="transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${current * 100}%)` }}
+            style={{ transform: translateX(`-${current * 100}%`) }}
           >
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="flex justify-center">
@@ -563,6 +561,7 @@ export default function Home() {
             ))}
           </CarouselContent>
           <CarouselPrevious
+            className="hidden sm:block"
             onClick={() =>
               setCurrent(
                 (prev) => (prev - 1 + testimonials.length) % testimonials.length
@@ -570,6 +569,7 @@ export default function Home() {
             }
           />
           <CarouselNext
+            className="hidden sm:block"
             onClick={() =>
               setCurrent((prev) => (prev + 1) % testimonials.length)
             }
@@ -609,15 +609,15 @@ export default function Home() {
 
           <div className="grid grid-cols-2 mt-6">
             <div className="flex items-center gap-2 text-[#CD8C66] font-semibold">
-              <Phone size={40} className="border rounded-full bg-orange-200 py-2"/>
+              <Phone size={40} className="border rounded-full bg-orange-200 py-2" />
               <div className="flex flex-col">
                 <span className="">Have any question?</span>
                 Free +92 (8800) - 8960
               </div>
             </div>
             <div className="flex items-center gap-2 text-[#CD8C66] font-semibold">
-              <Mail size={40} className="border rounded-full bg-orange-200 py-2"/>
-            <div className="flex flex-col">
+              <Mail size={40} className="border rounded-full bg-orange-200 py-2" />
+              <div className="flex flex-col">
                 <span className="">Write email</span>
                 needhelp@company.com
               </div>
@@ -684,7 +684,7 @@ export default function Home() {
 
       {/* section-11 */}
 
-      <div className="mt-[-300px]"> 
+      <div className="mt-[-300px]">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7006.403739129376!2d77.04282946701775!3d28.59372020373486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1739445379354!5m2!1sen!2sin"
           width="100%"
