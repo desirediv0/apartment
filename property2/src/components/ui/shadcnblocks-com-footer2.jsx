@@ -1,42 +1,40 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-
-import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { icons } from "lucide-react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer2 = ({
   logo = {
     src: "/loader.png",
-    alt: "blocks for shadcn/ui",
+    alt: "Company Logo",
+    title: "Company Name",
   },
 
   menuItems = [
     {
       title: "EXPLORE",
       links: [
-        { text: "about", url: "#" },
-        { text: "property", url: "#" },
-        { text: "contact", url: "#" },
+        { text: "About", url: "/about" },
+        { text: "Property", url: "/property" },
+        { text: "Contact", url: "/contact" },
       ],
     },
     {
-      title: "",
+      title: "SERVICES",
       links: [
-        { text: "Newz", url: "#" },
-        { text: "Shop", url: "#" },
-        { text: "privacy policy", url: "#" },
-        { text: "Careers", url: "#" },
+        { text: "News", url: "/news" },
+        { text: "Shop", url: "/shop" },
+        { text: "Privacy Policy", url: "/privacy-policy" },
+        { text: "Careers", url: "/careers" },
       ],
     },
     {
-      title: "Contact",
+      title: "CONTACT",
       links: [
-        { text: "30 Road Broklyn Street, 600 New York, USA", url: "#" },
-        { text: "needhelp@company.com", url: "#" },
-        { text: "+92 ( 8800 ) - 6780", url: "#" },
+        { text: "30 Road Brooklyn Street, NY, USA", url: "#" },
+        { text: "needhelp@company.com", url: "mailto:needhelp@company.com" },
+        { text: "+92 ( 8800 ) - 6780", url: "tel:+9288006780" },
       ],
     },
   ],
@@ -44,50 +42,66 @@ const Footer2 = ({
   copyright = "© 2025 Copyright. All rights reserved.",
 
   bottomLinks = [
-    { icons: <FaInstagram />, url: "#" },
-    { icons:<FaFacebookF />, url: "#" },
-  ]
+    { icon: <FaInstagram size={20} />, url: "https://instagram.com" },
+    { icon: <FaFacebookF size={20} />, url: "https://facebook.com" },
+  ],
 }) => {
   return (
-    (<section className="py-32">
-      <div className="container">
+    <section className="py-16 bg-gray-100">
+      <div className="container mx-auto px-6 lg:px-16">
         <footer>
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
-            <div className="col-span-2 mb-8 lg:mb-0">
-              <div className="flex items-center gap-2 lg:justify-start lg:px-20">
-                <Link href="/">
-                  <Image src={logo.src} alt={logo.alt} width={100} height={100} title={logo.title} className="w-[100px] h-[100px]" />
-                </Link>
-                <p className="text-xl font-semibold">{logo.title}</p>
-              </div>
+          {/* Top Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {/* Logo & Company Name */}
+            <div className="flex flex-col items-center lg:items-start">
+              <Link href="/">
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={100}
+                  height={100}
+                  className="w-[80px] h-[80px] object-contain"
+                />
+              </Link>
+              <p className="mt-3 text-lg font-semibold">{logo.title}</p>
             </div>
-            {menuItems.map((section, sectionIdx) => (
-              <div key={sectionIdx}>
-                <h3 className="mb-4 font-bold">{section.title}</h3>
-                <ul className="space-y-4 text-muted-foreground">
+
+            {/* Menu Sections */}
+            {menuItems.map((section, index) => (
+              <div key={index}>
+                <h3 className="mb-4 text-lg font-bold text-gray-800">{section.title}</h3>
+                <ul className="space-y-3">
                   {section.links.map((link, linkIdx) => (
-                    <li key={linkIdx} className="font-medium hover:text-primary">
-                      <a href={link.url}>{link.text}</a>
+                    <li key={linkIdx}>
+                      <Link
+                        href={link.url}
+                        className="text-gray-600 hover:text-gray-900 transition duration-200"
+                      >
+                        {link.text}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-          <div
-            className="mt-24 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
-            <p>{copyright}</p>
-            <ul className="flex gap-4">
-              {bottomLinks.map((link, linkIdx) => (
-                <li key={linkIdx} className="underline hover:text-primary">
-                  <Link href={link.url}>{link.icons}{link.text}</Link>
+
+          {/* Bottom Section */}
+          <div className="mt-10 border-t pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
+            <p className="text-center md:text-left">{copyright}</p>
+            <ul className="flex gap-5 mt-4 md:mt-0">
+              {bottomLinks.map((link, idx) => (
+                <li key={idx}>
+                  <Link href={link.url} className="hover:text-gray-900 transition duration-200">
+                    {link.icon}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
         </footer>
       </div>
-    </section>)
+    </section>
   );
 };
 
