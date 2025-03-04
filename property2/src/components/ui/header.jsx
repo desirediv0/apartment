@@ -3,11 +3,9 @@
 import { Button } from "@/components/ui/button";
 import {
     NavigationMenu,
-    NavigationMenuContent,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Menu, MoveRight, X } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -31,8 +29,8 @@ function Header1() {
     }, []);
 
     return (
-        <header className="w-full z-40 sticky top-0 left-0 bg-background shadow-md">
-            <div className="container mx-auto min-h-20 flex flex-wrap gap-6 py-4 px-6 lg:grid lg:grid-cols-3 items-center">
+        <header className="w-full z-40 sticky top-0 left-0 bg-background shadow-md sm:h-[80px]">
+            <div className="container mx-auto flex flex-wrap gap-6 py-4 px-6 lg:grid lg:grid-cols-3 items-center">
                 {/* Navigation Items */}
                 <div className="justify-start items-center gap-6 lg:flex hidden">
                     <NavigationMenu>
@@ -50,21 +48,31 @@ function Header1() {
 
                 {/* Logo */}
                 <div className="flex lg:justify-center w-full lg:w-auto">
-                    <Image
-                        src={"/loader.png"}
-                        alt={"property"}
-                        width={100}
-                        height={500}
-                        className="w-[60px] h-[60px] object-cover"
-                    />
+                    <Link href={"/."}>
+                        <Image
+                            src={"/loader.png"}
+                            alt={"property"}
+                            width={100}
+                            height={500}
+                            className="w-[40px] h-[40px] object-cover"
+                        />
+                    </Link>
                     {/* Mobile Menu Button */}
                     <div className="flex lg:hidden items-center justify-end w-full">
                         <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
-                            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                            {isOpen ? <X className="w-5 h-5" /> : <Menu size={70} className="bg-gray-200" />}
                         </Button>
 
                         {isClient && isOpen && (
                             <div className="absolute top-0 border-t flex flex-col w-full right-0 bg-background shadow-lg py-6 px-6 container gap-6">
+
+                                {/* Close Button Inside Menu */}
+                                <div className="flex justify-end">
+                                    <Button variant="ghost" onClick={() => setOpen(false)}>
+                                        <X size={40} className="w-5 h-5" />
+                                    </Button>
+                                </div>
+
                                 {navigationItems.map((item) => (
                                     <div key={item.title} className="py-2">
                                         <Link
@@ -80,6 +88,7 @@ function Header1() {
                             </div>
                         )}
                     </div>
+
                 </div>
 
                 {/* Right Side Icons */}

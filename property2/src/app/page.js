@@ -557,122 +557,117 @@ export default function Home() {
       </div>
 
       {/* section-10 */}
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+  {/* Left Section - Agent Info */}
+  <div>
+    <p className="text-md text-[#CD8C66] font-semibold uppercase">
+      Visit the Property
+    </p>
+    <h2 className="text-4xl md:text-5xl font-bold my-2 uppercase">
+      Request a Visit
+    </h2>
 
-      <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 mt-10">
-        {/* Left Section - Agent Info */}
-        <div>
-          <p className="text-md text-[#CD8C66] font-semibold uppercase">
-            Visit the Property
-          </p>
-          <h2 className="text-5xl font-bold my-2 uppercase">Request a Visit</h2>
-          <div className="flex items-start gap-4 mt-6">
-            {/* Image */}
-            <Image
-              src="/contact.webp"
-              alt="Agent"
-              width={70}
-              height={70}
-              className="rounded-full"
-            />
+    <div className="flex flex-col md:flex-row items-start gap-4 mt-6">
+      {/* Image */}
+      <Image
+        src="/contact.webp"
+        alt="Agent"
+        width={70}
+        height={70}
+        className="rounded-full"
+      />
 
-            {/* Agent Info */}
-            <div className="flex flex-col items-center">
-              <p className="font-semibold">Ram</p>
-              <span className="text-[#666057]">Agent</span>
-            </div>
-            <p className="text-[#666057]  items-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-              porta ultrices.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 mt-6">
-            <div className="flex items-center gap-2 text-[#CD8C66] font-semibold">
-              <Phone size={40} className="border rounded-full bg-orange-200 py-2" />
-              <div className="flex flex-col">
-                <span className="">Have any question?</span>
-                Free +92 (8800) - 8960
-              </div>
-            </div>
-            <div className="flex items-center gap-2 text-[#CD8C66] font-semibold">
-              <Mail size={40} className="border rounded-full bg-orange-200 py-2" />
-              <div className="flex flex-col">
-                <span className="">Write email</span>
-                needhelp@company.com
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Section - Contact Form */}
-        <div className="bg-[#221C13] text-white p-8 rounded-md md:w-[500px] relative">
-          <p className="text-[#CD8C66] font-semibold uppercase">
-            Contact with me
-          </p>
-          <h2 className="text-2xl font-bold mt-2">Write to Agent</h2>
-          <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              {...register("name", { required: "Name is required" })}
-              className="w-full p-3 bg-transparent border-b border-gray-500 outline-none"
-            />
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
-            )}
-
-            <input
-              type="email"
-              placeholder="Email Address"
-              {...register("email", { required: "Email is required" })}
-              className="w-full p-3 bg-transparent border-b border-gray-500 outline-none"
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email.message}</p>
-            )}
-
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              {...register("phone", { required: "Phone is required" })}
-              className="w-full p-3 bg-transparent border-b border-gray-500 outline-none"
-            />
-            {errors.phone && (
-              <p className="text-red-500 text-sm">{errors.phone.message}</p>
-            )}
-
-            <textarea
-              placeholder="Write a Message"
-              {...register("message", { required: "Message is required" })}
-              className="w-full p-3 bg-transparent border-b border-gray-500 outline-none"
-              rows="4"
-            />
-            {errors.message && (
-              <p className="text-red-500 text-sm">{errors.message.message}</p>
-            )}
-
-            <button
-              type="submit"
-              className="bg-[#CD8C66] p-3 w-full font-bold rounded mt-4 hover:bg-[#a56a50] transition"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
+      {/* Agent Info */}
+      <div className="flex flex-col">
+        <p className="font-semibold">Ram</p>
+        <span className="text-[#666057]">Agent</span>
       </div>
 
-      {/* section-11 */}
+      <p className="text-[#666057] mt-2 md:mt-0">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta ultrices.
+      </p>
+    </div>
 
-      <div className="mt-[-300px]">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7006.403739129376!2d77.04282946701775!3d28.59372020373486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1739445379354!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+    {/* Contact Details */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+      <div className="flex items-center gap-3 text-[#CD8C66] font-semibold">
+        <Phone size={30} className="border rounded-full bg-orange-200 p-2" />
+        <div className="flex flex-col">
+          <span>Have any question?</span>
+          Free +92 (8800) - 8960
+        </div>
       </div>
+      <div className="flex items-center gap-3 text-[#CD8C66] font-semibold">
+        <Mail size={30} className="border rounded-full bg-orange-200 p-2" />
+        <div className="flex flex-col">
+          <span>Write email</span>
+          needhelp@company.com
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Right Section - Contact Form */}
+  <div className="bg-[#221C13] text-white p-6 md:p-8 rounded-md w-full max-w-md mx-auto">
+    <p className="text-[#CD8C66] font-semibold uppercase">Contact with me</p>
+    <h2 className="text-2xl font-bold mt-2">Write to Agent</h2>
+
+    <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4">
+      <input
+        type="text"
+        placeholder="Your Name"
+        {...register("name", { required: "Name is required" })}
+        className="w-full p-3 bg-transparent border-b border-gray-500 outline-none"
+      />
+      {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+
+      <input
+        type="email"
+        placeholder="Email Address"
+        {...register("email", { required: "Email is required" })}
+        className="w-full p-3 bg-transparent border-b border-gray-500 outline-none"
+      />
+      {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        {...register("phone", { required: "Phone is required" })}
+        className="w-full p-3 bg-transparent border-b border-gray-500 outline-none"
+      />
+      {errors.phone && <p className="text-red-500 text-sm">{errors.phone.message}</p>}
+
+      <textarea
+        placeholder="Write a Message"
+        {...register("message", { required: "Message is required" })}
+        className="w-full p-3 bg-transparent border-b border-gray-500 outline-none"
+        rows="4"
+      />
+      {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+
+      <button
+        type="submit"
+        className="bg-[#CD8C66] p-3 w-full font-bold rounded mt-4 hover:bg-[#a56a50] transition"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+{/* Google Map Section */}
+<div className="mt-10">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7006.403739129376!2d77.04282946701775!3d28.59372020373486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1739445379354!5m2!1sen!2sin"
+    width="100%"
+    height="450"
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    className="rounded-md shadow-lg"
+  ></iframe>
+</div>
+
     </>
   );
 }
