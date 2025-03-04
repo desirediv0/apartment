@@ -29,17 +29,17 @@ function Header1() {
     }, []);
 
     return (
-        <header className="w-full z-40 sticky top-0 left-0 bg-background shadow-md sm:h-[80px]">
+        <header className="w-full z-40 bg-black sticky top-0 left-0 bg-background shadow-md sm:h-[80px]">
             <div className="container mx-auto flex flex-wrap gap-6 py-4 px-6 lg:grid lg:grid-cols-3 items-center">
                 {/* Navigation Items */}
                 <div className="justify-start items-center gap-6 lg:flex hidden">
                     <NavigationMenu>
-                        <NavigationMenuList className="flex gap-6">
+                        <NavigationMenuList className="flex gap-2 text-white">
                             {navigationItems.map((item) => (
                                 <NavigationMenuItem key={item.title}>
-                                    <NavigationMenuLink href={item.href} passHref>
+                                    <Link href={item.href} >
                                         <Button variant="ghost" className="text-base px-4 py-2">{item.title}</Button>
-                                    </NavigationMenuLink>
+                                    </Link>
                                 </NavigationMenuItem>
                             ))}
                         </NavigationMenuList>
@@ -49,13 +49,14 @@ function Header1() {
                 {/* Logo */}
                 <div className="flex lg:justify-center w-full lg:w-auto">
                     <Link href={"/."}>
-                        <Image
+                        {/* <Image
                             src={"/loader.png"}
                             alt={"property"}
                             width={100}
                             height={500}
                             className="w-[40px] h-[40px] object-cover"
-                        />
+                        /> */}
+                        <span className="text-white text-3xl font-bold uppercase">XCELB2B</span>
                     </Link>
                     {/* Mobile Menu Button */}
                     <div className="flex lg:hidden items-center justify-end w-full">
@@ -93,10 +94,9 @@ function Header1() {
 
                 {/* Right Side Icons */}
                 <div className="flex justify-end items-center space-x-6 w-full lg:w-auto">
-                    <Button variant="ghost" className="hidden md:flex p-2"><FaSearch size={18} /></Button>
+                    <Button variant="ghost" className="hidden md:flex p-2 text-white"><FaSearch size={18} /></Button>
                     <div className="border-r hidden md:block h-6"></div>
-                    <Button variant="outline" className="hidden md:flex p-2"><FaShoppingCart size={18} /></Button>
-                    <Button className="hidden md:flex px-6 py-2">Get started</Button>
+                    <Button className="hidden md:flex px-6 py-2 bg-white text-black">Get started</Button>
                 </div>
             </div>
         </header>

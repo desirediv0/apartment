@@ -50,7 +50,7 @@ const Page = () => {
       <Banner title={"About Us"} breadcrumbs={"About"}/>
 
       {/* Section 1: Cards */}
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-6 py-12 lg:mt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, index) => (
             <Card key={index}>
@@ -79,11 +79,9 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Section 2: Testimonials */}
+      {/* section-2: company */}
 
-      {/* section-3: company */}
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 h-auto mt-10 p-4 sm:p-7 ml-2 sm:ml-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 h-auto mt-10 p-4 sm:p-7 ml-2 sm:ml-4 lg:mt-[20px] lg:mb-[40px]">
         {[
           "brand-1-1.png",
           "brand-1-2.png",
@@ -103,7 +101,7 @@ const Page = () => {
         ))}
       </div>
 
-      {/* section-4:  apartment*/}
+      {/* section-3:  apartment*/}
 
       <div className="mx-auto px-4 sm:px-6 lg:px-12 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -169,7 +167,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Section 5: agents*/}
+      {/* Section 4: agents*/}
 
       <section className="container mx-auto px-6 py-12 text-center">
         {/* Section Title */}
@@ -212,7 +210,7 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Section 6: appointment */}
+      {/* Section 5: appointment */}
 
       <section
         className="relative bg-orange-400 text-white py-16 px-6 md:px-16"

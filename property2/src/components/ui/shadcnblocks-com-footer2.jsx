@@ -32,14 +32,15 @@ const Footer2 = ({
     {
       title: "CONTACT",
       links: [
-        { text: "30 Road Brooklyn Street, NY, USA", url: "#" },
+        { text: "T-16, Pocket-5, Plot no-6, Malik Builcon, Commercial Plaza Dwarka Sector-12, New Delhi, 110075", url: "https://www.google.com/maps/search/?q=T-16,+Pocket-5,+Plot+no-6,+Malik+Builcon,+Commercial+Plaza+Dwarka+Sector-12,+New+Delhi,+110075" },
+        { text: "T-16, Pocket-5, Plot no-6, Malik Builcon, Commercial Plaza Dwarka Sector-12, New Delhi, 110075", url: "https://www.google.com/maps/search/?q=T-16,+Pocket-5,+Plot+no-6,+Malik+Builcon,+Commercial+Plaza+Dwarka+Sector-12,+New+Delhi,+110075" },
         { text: "needhelp@company.com", url: "mailto:needhelp@company.com" },
         { text: "+92 ( 8800 ) - 6780", url: "tel:+9288006780" },
       ],
     },
   ],
 
-  copyright = "© 2025 Copyright. All rights reserved.",
+  copyright = "© 2025 Copyright XCELB2B. All rights reserved.",
 
   bottomLinks = [
     { icon: <FaInstagram size={20} />, url: "https://instagram.com" },

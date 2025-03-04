@@ -31,7 +31,7 @@ function Case() {
   }, [api]);
 
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-screen flex items-center justify-center lg:mt-[-210px] lg:mb-[-90px]">
       {/* Carousel Container */}
       <div className="w-full max-w-7xl mx-auto px-4">
         <Carousel setApi={setApi} className="w-full">

@@ -86,8 +86,8 @@ const Props = () => {
       {/* banner */}
       <Banner title={"Property"} breadcrumbs={"Property"}/>
 
-      <div className="containe mx-auto px-6 lg:px-20 py-12 text-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="containe mx-auto px-6 lg:px-20 py-12 text-center lg:mt-[30px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {properties.map((property) => (
             <Link key={property.id} href={property.link} passHref>
               <div className="bg-white rounded-xl shadow-md p-4 cursor-pointer hover:shadow-lg transition">

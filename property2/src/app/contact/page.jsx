@@ -1,12 +1,13 @@
 import React from "react";
 import Banner from "@/components/ui/banner";
+import Link from "next/link";
 
 const Page = () => {
   return (
     <>
       {/* banner */}
 
-      <Banner title={"Contact us"} breadcrumbs={"Contact us"}/>
+      <Banner title={"Contact us"} breadcrumbs={"Contact us"} />
 
       <div className="w-full h-full  ">
         <div className="text-center pt-12 md:pt-24">
@@ -52,31 +53,85 @@ const Page = () => {
 
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-10 pt-20 md:pt-36 md:pl-20">
           <div className="w-full">
-            <h1 className="font-bold text-xl">AUSTIN</h1>
-            <p className="text-gray-500 pt-4">
-              22 Texas West Hills <br /> needhelp@company.com <br /> +92 (0088)
-              - 8690
+            <h1 className="font-bold text-xl">New Delhi</h1>
+            <p className="text-gray-500 pt-2">
+              <Link
+                href="https://www.google.com/maps/search/?q=T-16,+Pocket-5,+Plot+no-6,+Malik+Builcon,+Commercial+Plaza+Dwarka+Sector-12,+New+Delhi,+110075"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:underline"
+              >
+                T-16, Pocket-5, Plot no-6, Malik Builcon, Commercial Plaza Dwarka Sector-12, New Delhi, 110075
+              </Link>
+              <br />
+              <Link href="mailto:hello@desirediv.com" className="text-gray-500 hover:underline">
+                hello@desirediv.com
+              </Link>
+              <br />
+              <Link href="tel:+919871228881" className="text-gray-500 hover:underline">
+                +91 9871228881
+              </Link>
             </p>
           </div>
           <div className="w-full">
-            <h1 className="font-bold text-xl">BOSTON</h1>
-            <p className="text-gray-500 pt-4">
-              5 Federal Street Boston <br /> needhelp@company.com <br /> +92
-              (0088) - 8690
+            <h1 className="font-bold text-xl">Gurgaon</h1>
+            <p className="text-gray-500 pt-2">
+              <Link
+                href="https://www.google.com/maps/search/?q=T-16,+Pocket-5,+Plot+no-6,+Malik+Builcon,+Commercial+Plaza+Dwarka+Sector-12,+New+Delhi,+110075"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:underline"
+              >
+                T-16, Pocket-5, Plot no-6, Malik Builcon, Commercial Plaza Dwarka Sector-12, New Delhi, 110075
+              </Link> <br />
+              <Link href="mailto:hello@desirediv.com" className="text-gray-500 hover:underline">
+                hello@desirediv.com
+              </Link>
+              <br />
+              <Link href="tel:+9871228880" className="text--500 hover:underline">
+                +91 9871228881
+              </Link>
             </p>
           </div>
           <div className="w-full">
-            <h1 className="font-bold text-xl">NEW YORK</h1>
-            <p className="text-gray-500 pt-4">
-              8th Broklyn New York <br /> needhelp@company.com <br /> +92 (0088)
-              - 8690
+            <h1 className="font-bold text-xl">New Delhi</h1>
+            <p className="text-gray-500 pt-2">
+              <Link
+                href="https://www.google.com/maps/search/?q=T-16,+Pocket-5,+Plot+no-6,+Malik+Builcon,+Commercial+Plaza+Dwarka+Sector-12,+New+Delhi,+110075"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:underline"
+              >
+                T-16, Pocket-5, Plot no-6, Malik Builcon, Commercial Plaza Dwarka Sector-12, New Delhi, 110075
+              </Link>
+              <br />
+              <Link href="mailto:hello@desirediv.com" className="text-gray-500 hover:underline">
+                hello@desirediv.com
+              </Link>
+              <br />
+              <Link href="tel:+919871228881" className="text-gray-500 hover:underline">
+                +91 9871228881
+              </Link>
             </p>
           </div>
           <div className="w-full">
-            <h1 className="font-bold text-xl">BALTIMORE</h1>
-            <p className="text-gray-500 pt-4">
-              3 Lombabr 50 Baltimore <br /> needhelp@company.com <br /> +92
-              (0088) - 8690
+            <h1 className="font-bold text-xl">Gurgaon</h1>
+            <p className="text-gray-500 pt-2">
+              <Link
+                href="https://www.google.com/maps/search/?q=T-16,+Pocket-5,+Plot+no-6,+Malik+Builcon,+Commercial+Plaza+Dwarka+Sector-12,+New+Delhi,+110075"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 hover:underline"
+              >
+                T-16, Pocket-5, Plot no-6, Malik Builcon, Commercial Plaza Dwarka Sector-12, New Delhi, 110075
+              </Link> <br />
+              <Link href="mailto:hello@desirediv.com" className="text-gray-500 hover:underline">
+                hello@desirediv.com
+              </Link>
+              <br />
+              <Link href="tel:+9871228880" className="text--500 hover:underline">
+                +91 9871228881
+              </Link>
             </p>
           </div>
         </div>
