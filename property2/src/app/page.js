@@ -314,13 +314,6 @@ export default function Home() {
           >
             <div className="w-full flex items-center justify-between">
               <div className="w-12 h-12 bg-gray-700">
-                {/* <Image
-                  src="/about-1-1.jpg"
-                  alt="Luxury Apartment"
-                  width={100}
-                  height={100}
-                  className="w-full h-full object-cover rounded-lg" 
-                  /> */}
               </div>
 
               {/* Animated Icon */}
@@ -560,20 +553,6 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious
-            className="hidden sm:block"
-            onClick={() =>
-              setCurrent(
-                (prev) => (prev - 1 + testimonials.length) % testimonials.length
-              )
-            }
-          />
-          <CarouselNext
-            className="hidden sm:block"
-            onClick={() =>
-              setCurrent((prev) => (prev + 1) % testimonials.length)
-            }
-          />
         </Carousel>
       </div>
 
